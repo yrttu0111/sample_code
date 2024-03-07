@@ -16,7 +16,7 @@ export class RestaurantController {
     return await this.restaurantService.findAll(query);
   }
   @ApiOperation({ summary: "식당 등록" })
-  @ApiBody({ type: CreateGymDto })
+  @ApiBody({ type: CreateRestaurantDto })
   @ApiResponse({ type: RestaurantResponseDto })
   @Post()
   async create(
